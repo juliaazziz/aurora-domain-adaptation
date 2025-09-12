@@ -1,0 +1,23 @@
+# Basic
+tqdm
+numpy
+pandas
+seaborn
+ipykernel
+matplotlib
+jupyterlab
+
+# Audio
+librosa
+
+# Machine learning
+silabs-mltk
+scikit-learn
+
+# TensorFlow
+tensorflow
+tensorboard
+tensorflow-io
+tensorflow-hub
+tensorboard-plugin-profile
+tensorflow-serving-api-gpu

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+.venv/
+
+# Data directories
+records/
+out/
+data/
+img/
+
+# Outfiles
+*.pkl
+*.pdf
