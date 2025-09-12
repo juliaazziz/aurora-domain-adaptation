@@ -5,7 +5,6 @@ __pycache__/
 # Data directories
 records/
 out/
-data/
 img/
 
 # Outfiles

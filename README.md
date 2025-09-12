@@ -58,7 +58,7 @@ Fine-tuning settings are described in Section 4.3 of the paper.
 To run a fine-tuning experiment use the following command inside the `experiments/` directory:
 
 ```sh
-python3 run.py <data_dir> [<experiment_id>]
+python run.py <data_dir> [<experiment_id>]
 ```
 
 The script will run a K-fold cross-validation loop to determine the optimal layers to unfreeze, and then re-train the base model using the full dataset from the `--data_dir` directory.

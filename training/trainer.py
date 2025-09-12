@@ -17,7 +17,7 @@ from utils.tfrecord_handler import TFRecordHandler
 from utils.frontend_settings import frontend_settings
 
 class Trainer:
-    def __init__(self, model_name="resnet18", dataset="../data/birds", batch_size=64, epochs=35, dropout=0.0):
+    def __init__(self, model_name="resnet18", dataset="../data/falklands", batch_size=64, epochs=35, dropout=0.0):
         """
         Initializes the trainer.
 
@@ -33,7 +33,7 @@ class Trainer:
         self.epochs = epochs
         self.dropout = dropout
 
-        self.records_path = f"{dataset}/records_100/"
+        self.records_path = f"{dataset}/records/"
 
         self.train_record = self.records_path + "train.tfrecord"
         self.test_record  = self.records_path + "test.tfrecord"
@@ -49,10 +49,9 @@ class Trainer:
         for spec, _ in self.train_ds.take(1):
             self.input_shape = spec.shape + (1,)
 
-        # self.model = self._build_model()
-        self.initial_modelfile = f"out/{self.model_name}/initial_{self.model_name}_{self.dropout}dropout_100.keras"
-        self.trained_modelfile = f"out/{self.model_name}/trained_{self.model_name}_{self.dropout}dropout_100.keras"
-        self.tflite_modelfile = f"out/{self.model_name}/tflite_{self.model_name}_{self.dropout}dropout_100.tflite"
+        self.initial_modelfile = f"out/{self.model_name}/initial_{self.model_name}.keras"
+        self.trained_modelfile = f"out/{self.model_name}/trained_{self.model_name}.keras"
+        self.tflite_modelfile = f"out/{self.model_name}/tflite_{self.model_name}.tflite"
 
     def _build_model(self):
         """
@@ -63,7 +62,7 @@ class Trainer:
         if self.model_name == "resnet18":
             base_model = ResNet18(self.input_shape)
         else:
-            base_model = SqueezeNet(self.input_shape)
+            raise ValueError(f"Model {self.model_name} not recognized.")
         
         model = keras.models.Sequential([
             base_model,
@@ -107,8 +106,8 @@ class Trainer:
         Loads and fine-tunes a pre-trained model by unfreezing the top layers.
         """
         if set_records:
-            self.ft_train_record = records_path + "/records_100/train.tfrecord"
-            self.ft_val_record   = records_path + "/records_100/val.tfrecord"
+            self.ft_train_record = records_path + "/records/train.tfrecord"
+            self.ft_val_record   = records_path + "/records/val.tfrecord"
 
             self.ft_handler = TFRecordHandler(records_path,
                                             records_path + "/metadata.csv",
