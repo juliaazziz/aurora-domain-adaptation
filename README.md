@@ -15,16 +15,16 @@
 
   <div align="center">
     <h3>
+      <a href="https://gitlab.fing.edu.uy/aurora/aurora-ml">
+        Original code
+      </a>
+      <span> | </span>
       <a href="https://gitlab.fing.edu.uy/aurora/aurora-fw">
         Firmware
       </a>
       <span> | </span>
       <a href="https://gitlab.fing.edu.uy/aurora/aurora-hw">
         Hardware
-      </a>
-      <span> | </span>
-      <a href="https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/50313">
-        Thesis docs
       </a>
     </h3>
   </div>

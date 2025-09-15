@@ -1,6 +1,6 @@
 """
 @file trainer.py
-@brief Class for training, fine-tuning, and quantizing models.
+@brief Class for training and fine-tuning models.
 """
 
 import sys
@@ -51,7 +51,6 @@ class Trainer:
 
         self.initial_modelfile = f"out/{self.model_name}/initial_{self.model_name}.keras"
         self.trained_modelfile = f"out/{self.model_name}/trained_{self.model_name}.keras"
-        self.tflite_modelfile = f"out/{self.model_name}/tflite_{self.model_name}.tflite"
 
     def _build_model(self):
         """
