@@ -38,6 +38,8 @@ In this repository we publish the model checkpoints and code described in the fo
 
 The code found in this repository is a trimmed version of the [full project](https://gitlab.fing.edu.uy/aurora/aurora-ml), showing only what's relevant in the context of our DCASE2025 paper. For additional context you can head to the original repo.
 
+All mentioned datasets can be downloaded from [Zenodo](https://zenodo.org/records/17121978).
+
 ## Abstract
 
 Passive acoustic monitoring is a valuable tool for wildlife research, but scheduled recording often results in large volumes of audio, much of which may not be of interest. Selective audio recording, where audio is only saved when relevant activity is detected, offers an effective alternative. In this work, we leverage a low-cost embedded system that implements selective recording using an on-device classification model and evaluate its deployment for detecting penguin vocalization. 
@@ -75,7 +77,7 @@ If you find this work useful, please cite our paper:
 
 ```bib
 @inproceedings{Azziz2025,
-    author = "Azziz, Julia and Lema, Josefina and Ziegler, Lucía and Steinfeld, Leonardo and Rocamora, Martín",
+    author = "Azziz, Julia and Lema, Josefina and Ziegler, Lucía and Anzibar Fialho, Maximiliano and Steinfeld, Leonardo and Rocamora, Martín",
     title = "Assessing a Domain-Adaptive Deployment Workflow for Selective Audio Recording in Wildlife Acoustic Monitoring",
     booktitle = "Proceedings of the Detection and Classification of Acoustic Scenes and Events 2025 Workshop (DCASE2025)",
     address = "Barcelona, Spain",
