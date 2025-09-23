@@ -17,7 +17,7 @@ from utils.tfrecord_handler import TFRecordHandler
 from utils.frontend_settings import frontend_settings
 
 class Trainer:
-    def __init__(self, model_name="resnet18", dataset="../data/falklands", batch_size=64, epochs=35, dropout=0.0):
+    def __init__(self, model_name="resnet18", dataset="falklands", batch_size=64, epochs=35, dropout=0.0):
         """
         Initializes the trainer.
 
@@ -33,7 +33,9 @@ class Trainer:
         self.epochs = epochs
         self.dropout = dropout
 
-        self.records_path = f"{dataset}/records/"
+        self.data_path = f"../data/{dataset}/"
+
+        self.records_path = f"{self.data_path}/records/"
 
         self.train_record = self.records_path + "train.tfrecord"
         self.test_record  = self.records_path + "test.tfrecord"
@@ -49,8 +51,8 @@ class Trainer:
         for spec, _ in self.train_ds.take(1):
             self.input_shape = spec.shape + (1,)
 
-        self.initial_modelfile = f"out/{self.model_name}/initial_{self.model_name}.keras"
-        self.trained_modelfile = f"out/{self.model_name}/trained_{self.model_name}.keras"
+        self.initial_modelfile = f"out/{self.model_name}/{dataset}_pretrained.keras"
+        self.trained_modelfile = f"out/{self.model_name}/{dataset}_finetuned.keras"
 
     def _build_model(self):
         """

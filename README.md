@@ -33,7 +33,7 @@
 In this repository we publish the model checkpoints and code described in the following paper:
 
 - **Title**: Assessing a Domain-Adaptive Deployment Workflow for Selective Audio Recording in Wildlife Acoustic Monitoring
-- **Authors**: Julia Azziz, Josefina Lema, Lucía Ziegler, Leonardo Steinfeld, Martín Rocamora
+- **Authors**: Julia Azziz, Josefina Lema, Maximiliano Anzibar Fialho, Lucía Ziegler, Leonardo Steinfeld, Martín Rocamora
 - **Workshop**: Proceedings of the Workshop on Detection and Classification of Acoustic Scenes and Events, (DCASE), Barcelona, Spain, 2025
 
 The code found in this repository is a trimmed version of the [full project](https://gitlab.fing.edu.uy/aurora/aurora-ml), showing only what's relevant in the context of our DCASE2025 paper. For additional context you can head to the original repo.
