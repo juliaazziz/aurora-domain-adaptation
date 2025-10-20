@@ -19,12 +19,12 @@
         Original code
       </a>
       <span> | </span>
-      <a href="https://gitlab.fing.edu.uy/aurora/aurora-fw">
-        Firmware
+      <a href="https://zenodo.org/records/17121978">
+        Datasets
       </a>
       <span> | </span>
-      <a href="https://gitlab.fing.edu.uy/aurora/aurora-hw">
-        Hardware
+      <a href="https://gitlab.fing.edu.uy/aurora/">
+      Recorder project
       </a>
     </h3>
   </div>

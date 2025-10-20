@@ -10,3 +10,6 @@ img/
 # Outfiles
 *.pkl
 *.pdf
+
+# Mac
+*.DS_Store
