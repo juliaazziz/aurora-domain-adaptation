@@ -30,7 +30,7 @@
   </div>
 
 
-In this repository we publish the model checkpoints and code described in the following paper:
+In this repository we publish the model checkpoints and code described in the following paper, accesible [here](https://dcase.community/documents/workshop2025/proceedings/DCASE2025Workshop_Azziz_70.pdf):
 
 - **Title**: Assessing a Domain-Adaptive Deployment Workflow for Selective Audio Recording in Wildlife Acoustic Monitoring
 - **Authors**: Julia Azziz, Josefina Lema, Maximiliano Anzibar Fialho, Lucía Ziegler, Leonardo Steinfeld, Martín Rocamora
@@ -77,11 +77,15 @@ If you find this work useful, please cite our paper:
 
 ```bib
 @inproceedings{Azziz2025,
-    author = "Azziz, Julia and Lema, Josefina and Ziegler, Lucía and Anzibar Fialho, Maximiliano and Steinfeld, Leonardo and Rocamora, Martín",
+    author = "Azziz, Julia and Lema, Josefina and Anzibar, Maximiliano and Ziegler, Lucía and Steinfeld, Leonardo and Rocamora, Martín",
     title = "Assessing a Domain-Adaptive Deployment Workflow for Selective Audio Recording in Wildlife Acoustic Monitoring",
-    booktitle = "Proceedings of the Detection and Classification of Acoustic Scenes and Events 2025 Workshop (DCASE2025)",
+    booktitle = "Proceedings of the 10th Workshop on Detection and Classification of Acoustic Scenes and Events (DCASE 2025)",
     address = "Barcelona, Spain",
     month = "October",
     year = "2025",
+    pages = "200--204",
+    abstract = "Passive acoustic monitoring is a valuable tool for wildlife research, but scheduled recording often results in large volumes of audio, much of which may not be of interest. Selective audio recording, where audio is only saved when relevant activity is detected, offers an effective alternative. In this work, we leverage a low-cost embedded system that implements selective recording using an on-device classification model and evaluate its deployment for penguin vocalization detection. To address the domain shift between training and deployment conditions (e.g. environment, recording device), we propose a lightweight domain adaptation strategy based on fine-tuning the model with a small amount of location-specific data. We replicate realistic deployment scenarios using data from two geographically distinct locations, Antarctica and Falkland Islands, and assess the impact of fine-tuning on classification and selective recording performance. Our results show that fine-tuning with location-specific data substantially improves generalization ability and reduces both false positives and false negatives in selective recording. These findings highlight the value of integrating model fine-tuning into field monitoring workflows, in order to improve the reliability of acoustic data collection.",
+    isbn = "978-84-09-77652-8",
+    doi = "10.5281/zenodo.17251589"
 }
 ```
